@@ -27,6 +27,10 @@ on boot
     chown system  system /sys/bus/platform/devices/egis_input/navigation_enable
     chown system  system /sys/bus/platform/devices/egis_input/navigation_event
 
+#for chipone 
+    chmod 660 /dev/fpsensor
+    chown system system /dev/fpsensor
+
 #for silead fp
     chown system system /dev/silead_fp
     chmod 0666 /dev/silead_fp
@@ -49,10 +53,25 @@ on post-fs-data
     chmod 0660 /sys/bus/platform/devices/fpc_interrupt/irq_unexpected
     #endif /* OPLUS_FEATURE_FINGERPRINT */
 
+    #Zhaoliang.Shi@WT.BSP.Fingerprint , 2021/03/03, modify for fpc in TRUSTONIC
+    chown system system /sys/bus/platform/devices/fpc_fp/clk_enable
+    chown system system /sys/bus/platform/devices/fpc_fp/wakelock_enable
+    chown system system /sys/bus/platform/devices/fpc_fp/irq
+    chown system system /sys/bus/platform/devices/fpc_fp/irq_enable
+    chown system system /sys/bus/platform/devices/fpc_interrupt/regulator_enable
+    chown system system /sys/bus/platform/devices/fpc_interrupt/irq_unexpected
+    chmod 0200 /sys/bus/platform/devices/fpc_fp/irq_enable
+    chmod 0200 /sys/bus/platform/devices/fpc_fp/clk_enable
+    chmod 0200 /sys/bus/platform/devices/fpc_fp/wakelock_enable
+    chmod 0600 /sys/bus/platform/devices/fpc_fp/irq
+    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/regulator_enable
+    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/irq_unexpected
+
     #ifdef OPLUS_FEATURE_FINGERPRINT
     #zhoubo@BSP.Biometrics.Fingerprint, 2020/09/10, modify for fpc in QCOM (SM6125R Homer)
     chown system system /sys/bus/platform/devices/soc:fpc_fpc1020/irq
     chown system system /sys/bus/platform/devices/soc:fpc_fpc1020/irq_enable
+    chown system system /sys/bus/platform/devices/soc:fpc_fpc1020/regulator_enable
     chown system system /sys/bus/platform/devices/soc:fpc_fpc1020/wakelock_enable
     #endif /* OPLUS_FEATURE_FINGERPRINT */
 

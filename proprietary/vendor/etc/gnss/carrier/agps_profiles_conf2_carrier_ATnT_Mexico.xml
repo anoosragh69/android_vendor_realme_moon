@@ -6,7 +6,7 @@
   -->
 
   <cur_supl_profile name="ATnT_Mexico"
-      addr="supl.iusacell.com"
+      addr="supl.attmex.mx"
       port="7275"
       tls="true"
   />

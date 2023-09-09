@@ -3,9 +3,9 @@
 
     <feature>GLP
         <version>2.0</version>
-        <config>1</config>
+        <config>0</config>
         <format>Enable</format>
-        <setting>1</setting>
+        <setting>0</setting>
     </feature>
 
     <feature>CAIC

@@ -26,6 +26,12 @@
                 Ex: 460 FFF means all operators in China
     -->
 
+    <!-- Add for US operators -->
+    <EccEntry Ecc="*911" Category="0" Condition="1" Plmn="310 FFF"/>
+    <EccEntry Ecc="#911" Category="0" Condition="1" Plmn="310 FFF"/>
+    <EccEntry Ecc="*911" Category="0" Condition="1" Plmn="311 FFF"/>
+    <EccEntry Ecc="#911" Category="0" Condition="1" Plmn="311 FFF"/>
+
     <!-- Add for Myanmar due to AOSP eccdata will treat it as ecc -->
     <EccEntry Ecc="191" Category="0" Condition="2" Plmn="414 FFF"/>
     <EccEntry Ecc="192" Category="0" Condition="2" Plmn="414 FFF"/>

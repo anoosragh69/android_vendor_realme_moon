@@ -27,6 +27,7 @@
 		<Param path="SPK_2MICEV" param_id="3"/>
 		<Param path="BT" param_id="2"/>
 		<Param path="MISC" param_id="2"/>
+		<Param path="HEARING_AID" param_id="0"/>
 	</ParamTree>
 	<ParamUnitPool>
 		<ParamUnit param_id="0">
